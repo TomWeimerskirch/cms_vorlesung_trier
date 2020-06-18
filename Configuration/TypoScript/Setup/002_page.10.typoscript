@@ -1,0 +1,71 @@
+#####################
+##  FLUIDTEMPLATE  ##
+## This name is used together with the set format to find the template in the given templateRootPaths.
+page.10 = FLUIDTEMPLATE
+page.10 {
+  partialRootPath = EXT:cms_vorlesung_trier/Resources/Private/Partials
+  layoutRootPath = EXT:cms_vorlesung_trier/Resources/Private/Layouts
+
+  file.stdWrap.cObject = CASE
+  file.stdWrap.cObject {
+    key.data = pagelayout
+
+    ## pagelayout variants in templates
+    pagets__standard = TEXT
+    pagets__standard.value = EXT:cms_vorlesung_trier/Resources/Private/Templates/Standard.html
+
+    #pagets__2col = TEXT
+    #pagets__2col.value = EXT:cms_vorlesung_trier/Resources/Private/Templates/Twocol.html
+
+    #pagets__3col = TEXT
+    #pagets__3col.value = EXT:cms_vorlesung_trier/Resources/Private/Templates/Threecol.html
+
+    default < .pagets__standard
+  }
+
+  variables {
+    ## main content area and first column in multi-column
+    content0 < styles.content.get
+    content0.select.where = colPos = 0
+    content0.stdWrap.ifEmpty.stdWrap.wrap = &nbsp;
+    ## column above with full width
+    content1 < styles.content.get
+    content1.select.where = colPos = 4
+    ## second column in multi-column
+    content2 < styles.content.get
+    content2.select.where = colPos = 2
+
+    ## column below with full width
+    content3 < styles.content.get
+    content3.select.where = colPos = 5
+    ## third column in multi-column
+    content4 < styles.content.get
+    content4.select.where = colPos = 3
+
+
+    ## for the horizontal and vertical menu types !!!!
+    menuType = TEXT
+    menuType.value = {$cms_vorlesung_trier.menuType}
+    
+    ## navigation parameters for SmartmenuThemes
+    SmartmenuThemes = TEXT
+    SmartmenuThemes.value = {$cms_vorlesung_trier.SmartmenuThemes}
+    
+    ## language parameters
+    showLang = TEXT
+    showLang.value = {$cms_vorlesung_trier.showLang}
+  }
+  ## sets the given settings array in the fluid template. In the view, the value can then be used.
+  ## To access logo file in the template file use this:
+  ## {settings.logoFile}
+  settings {
+  ## specifies the Search parameter in the header
+    hideSearch = {$cms_vorlesung_trier.hideSearch}
+  ## specifies the logo parameter in the header 
+    logoFile = {$cms_vorlesung_trier.logoFile}
+    logoAltText = {$cms_vorlesung_trier.companyname}
+    logoRootID = {$cms_vorlesung_trier.rootId}
+    logoTitle = {$cms_vorlesung_trier.companyname}
+  }
+}
+

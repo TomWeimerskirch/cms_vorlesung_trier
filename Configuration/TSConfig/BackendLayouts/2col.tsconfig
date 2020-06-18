@@ -1,0 +1,16 @@
+#mod.web_layout.BackendLayouts {
+  #2col {
+    #title = LLL:EXT:cms_vorlesung_trier/Resources/Private/Language/locallang.xlf:BE_Layout-2col
+    #icon = EXT:cms_vorlesung_trier/Resources/Public/Icons/Backendlayouts/twocol.png
+    #config {
+      #backend_layout {
+        #colCount =
+        #rowCount = 
+        #rows {
+
+
+        #}
+      #}
+    #}
+  #}
+#}

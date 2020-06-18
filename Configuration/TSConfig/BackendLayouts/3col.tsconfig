@@ -1,0 +1,9 @@
+#mod.web_layout.BackendLayouts {
+  #3col {
+    #title = LLL:EXT:cms_vorlesung_trier/Resources/Private/Language/locallang.xlf:BE_Layout-3col
+    #icon = EXT:cms_vorlesung_trier/Resources/Public/Icons/Backendlayouts/threecol.png
+    #config {
+
+    #}
+  #}
+#}
