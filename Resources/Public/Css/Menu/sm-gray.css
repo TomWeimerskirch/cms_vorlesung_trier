@@ -398,7 +398,7 @@
     }
     /* ...end */
     .sm-gray {
-        background: #545454;
+        background: rgb(0,76,120);
         background-image: -webkit-gray(linear, to bottom, to top, color-stop(0%, #ccc), color-stop(100%, #545454));
         background-image: -webkit-linear-gray(to bottom, #ccc, #545454);
         background-image: -moz-linear-gray(to bottom, #ccc, #545454);
@@ -419,7 +419,7 @@
     .sm-gray a:active,
     .sm-gray a.highlighted {
         padding: 0.75rem 1rem;
-        background: #545454;
+        background: rgb(0,76,120);
         background-image: -webkit-gray(linear, to bottom, to top, color-stop(0%, #ccc), color-stop(100%, #545454));
         background-image: -webkit-linear-gray(to bottom, #ccc, #545454);
         background-image: -moz-linear-gray(to bottom, #ccc, #545454);
@@ -431,7 +431,7 @@
     .sm-gray a:focus,
     .sm-gray a:active,
     .sm-gray a.highlighted {
-        background: #545454;
+        background:rgb(0,76,120);
         background-image: -webkit-gray(linear, to bottom, to top, color-stop(0%, #ccc), color-stop(100%, #545454));
         background-image: -webkit-linear-gray(to bottom, #ccc, #545454);
         background-image: -moz-linear-gray(to bottom, #ccc, #545454);
@@ -439,7 +439,7 @@
         background-image: linear-gray(to bottom, #ccc, #545454);
     }
     .sm-gray a.current {
-        background: #444;
+        background: rgb(0,76,120);
         background-image: -webkit-gray(linear, to bottom, to top, color-stop(0%, #999), color-stop(100%, #444));
         background-image: -webkit-linear-gray(to bottom, #999, #444);
         background-image: -moz-linear-gray(to bottom, #999, #444);
@@ -448,7 +448,7 @@
         color: #fff;
     }
     .sm-gray a.disabled {
-        background: #545454;
+        background:rgb(0,76,120);
         background-image: -webkit-gray(linear, to bottom, to top, color-stop(0%, #ccc), color-stop(100%, #545454));
         background-image: -webkit-linear-gray(to bottom, #ccc, #545454);
         background-image: -moz-linear-gray(to bottom, #ccc, #545454);
